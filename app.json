@@ -1,0 +1,68 @@
+{
+  "expo": {
+    "name": "Convertly",
+    "slug": "convertly",
+    "scheme": "convertly",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.convertly.app"
+    },
+    "android": {
+      "package": "com.convertly.app",
+      "predictiveBackGestureEnabled": false,
+      "permissions": [
+        "READ_MEDIA_IMAGES",
+        "READ_MEDIA_VIDEO",
+        "READ_MEDIA_AUDIO"
+      ],
+      "adaptiveIcon": {
+        "backgroundColor": "#0A0A0F",
+        "foregroundImage": "./assets/adaptive-icon-foreground.png",
+        "backgroundImage": "./assets/adaptive-icon-background.png",
+        "monochromeImage": "./assets/monochrome.png"
+      }
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-sharing",
+      "expo-document-picker",
+      "expo-dev-client",
+      [
+        "expo-media-library",
+        {
+          "photosPermission": "Allow Convertly to access your photos.",
+          "savePhotosPermission": "Allow Convertly to save converted files to your gallery.",
+          "isAccessMediaLocationEnabled": true,
+          "granularPermissions": [
+            "photo",
+            "video",
+            "audio"
+          ]
+        }
+      ],
+      [
+        "expo-splash-screen",
+        {
+          "backgroundColor": "#0A0A0F",
+          "image": "./assets/splash-icon.png",
+          "imageWidth": 200,
+          "resizeMode": "contain"
+        }
+      ],
+      "expo-font",
+      "munim-ffmpeg",
+      "expo-video"
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "a28e0771-481e-4eeb-a1d6-a3376eb9c8fc"
+      }
+    }
+  }
+}
